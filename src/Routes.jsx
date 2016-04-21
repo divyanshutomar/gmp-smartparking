@@ -1,31 +1,19 @@
-import { Router, Route, Link } from 'react-router'
+import { Router, Route } from 'react-router'
 import { render } from 'react-dom'
-
-
-var React = require('react');
-var Companies = require('./pages/Companies.jsx');
-var Parkings = require('./pages/Parkings.jsx');
-var ParkingLots = require('./pages/ParkingLots.jsx');
-var ParkingSublots = require('./pages/ParkingSublots.jsx')
-var PricingSlots = require('./pages/PricingSlots.jsx')
-var PricingGrid = require('./pages/PricingGrid.jsx')
-var ReceiptContent = require('./pages/ReceiptContent.jsx')
-var Reason = require('./pages/Reason.jsx')
-
 import { useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
 
+
+var React = require('react');
+var AvailabilityView = require('./components/AvailabilityView.jsx');
+var ListManager = require('./components/ListManager.jsx');
+
+
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
- render((
+render((
 		<Router history={appHistory}>
-			<Route path="/companies" component={Companies}/>
-			<Route path="/companies/:compId/parkings" component={Parkings}/>
-			<Route path="/parkings/:parkId/parkinglots" component={ParkingLots}/>
-			<Route path="/parkinglots/:parkLotId/parkingsublots" component={ParkingSublots}/>
-			<Route path="/parkingsublots/:parksubLotId/pricingslots" component={PricingSlots}/>
-			<Route path="/pricingslots/:pricingId/pricingGrid" component={PricingGrid}/>
-			<Route path="/parkingsublots/:receiptId/receiptcontents" component={ReceiptContent}/>
-			<Route path="/parkingsublots/:reasonId/reason" component={Reason}/>
+			<Route path="/parkings" component={ListManager}/>
+			<Route path="/availability/:parkName" component={AvailabilityView}/>
 		</Router>
 	),document.getElementById('mainContainer'));

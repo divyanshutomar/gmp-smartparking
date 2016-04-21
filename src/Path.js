@@ -1,7 +1,7 @@
-const HOST = "https://dev.api.getmyparking.com";
+const HOST = "http://api.consumer.getmyparking.com";
 const PORT = "5000";
 const BASE_URL = "/api/v1/"
-const API_end = HOST+":"+PORT+BASE_URL;
+const API_end = HOST+BASE_URL;
 
 
 module.exports = {
