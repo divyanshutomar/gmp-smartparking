@@ -43,7 +43,7 @@ var ListManager = React.createClass({
 		return(
 			<div className="container">
 				<h3>Parkings</h3>
-				<div className="collection">
+				<div className="collection parkingList">
 				{parkingItems}
 				</div> 
 			</div>	

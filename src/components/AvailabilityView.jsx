@@ -30,7 +30,11 @@ var AvailabilityView = React.createClass({
 		this.getDataset();
 	},
 	componentDidMount: function () {
-		setInterval(this.getDataset,90000);
+		this.loadInterval = setInterval(this.getDataset,90000);
+	},
+	componentWillUnmount () {
+	    this.loadInterval && clearInterval(this.loadInterval);
+	    this.loadInterval = false;
 	},
 	render: function () {
 		return(
@@ -41,31 +45,31 @@ var AvailabilityView = React.createClass({
 						<h4 className="white-text">Availability</h4>
 					</div>
 					<div className="white-text black horz-Cont paddingCont">
-						<div className="center"><i className="fa fa-motorcycle fa-5x" aria-hidden="true"></i></div>
-						<div className="center"><i className="fa fa-car fa-5x" aria-hidden="true"></i></div>
-						<div className="center"><i className="fa fa-truck fa-5x" aria-hidden="true"></i></div>
-						<div className="center"><span className="icon-tractor"></span></div>
+						<div className="center"><i className="fa fa-motorcycle iconSize" aria-hidden="true"></i></div>
+						<div className="center"><i className="fa fa-car iconSize" aria-hidden="true"></i></div>
+						<div className="center"><i className="fa fa-truck iconSize" aria-hidden="true"></i></div>
+						<div className="center"><span className="icon-tractor iconSize"></span></div>
 					</div>
 					<div className="horz-Cont">
-						<div className="center"><h2>{this.state.BIKE}</h2></div>
-						<div className="center"><h2>{this.state.CAR}</h2></div>
-						<div className="center"><h2>{this.state.TRUCK}</h2></div>
-						<div className="center"><h2>{this.state.TRACTOR}</h2></div>
+						<div className="center"><h2 className="iconSize">{this.state.BIKE}</h2></div>
+						<div className="center"><h2 className="iconSize">{this.state.CAR}</h2></div>
+						<div className="center"><h2 className="iconSize">{this.state.TRUCK}</h2></div>
+						<div className="center"><h2 className="iconSize">{this.state.TRACTOR}</h2></div>
 					</div>
 				</div>
 				<footer className="">
 					<div className="">
-						<div className="row">
-							<div className="col s12 l7 paddingCont">
-								<div className="row logoFooter">
-									<div className="col l3"><span className="icon-logo"></span></div>
+						<div className="row removeBottomM">
+							<div className="col s12 m7 paddingCont">
+								<div className="row logoFooter removeBottomM">
+									<div className="col l3 center"><span className="icon-logo"></span></div>
 									<div className="green-text paddingCont col l9">
 										<h6>Book Your Parking at</h6>
 										<h5>GetMyParking.com</h5>
 									</div>
 								</div>
 							</div>
-							<div className="col s12 l5 black white-text paddingCont center">
+							<div className="col s12 m5 black white-text paddingCont center">
 								<h5 className="yellow-text">Kumbh Helpline Number : 1100</h5>
 								<h6>Smart Parking Managed By :</h6>
 								<h5>Dewas Transport Pvt. Ltd.</h5>

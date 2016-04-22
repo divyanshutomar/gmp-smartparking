@@ -13,7 +13,7 @@ const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
 render((
 		<Router history={appHistory}>
-			<Route path="/parkings" component={ListManager}/>
+			<Route path="/" component={ListManager}/>
 			<Route path="/availability/:parkName" component={AvailabilityView}/>
 		</Router>
 	),document.getElementById('mainContainer'));

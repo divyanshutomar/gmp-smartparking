@@ -6,43 +6,44 @@
 }
 
 footer {
-	height: 6rem; 
-	position: absolute;
+	height: 7.5rem; 
+	position: fixed;
+	left: 0;
 	bottom: 0;
 	width: 100%;
 	border-top: solid black 1px;
+	
+}
+.removeBottomM{
 	margin-bottom: 0!important;
 }
 
 .paddingCont{
-	padding: 1%;
+	padding: 1.5rem;
 }
 
 .vert-Cont{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .horz-Cont{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
-.helpFooter{
-	height: 100%;
-}
-.logoFooter{
-	margin-bottom: 0;
-}
 
-.icon-tractor{
-	font-size: 5em;
+.iconSize{
+	font-size: 5rem;
+}
+.parkingList{
+	font-size: xx-large;
 }
 .icon-samhasth{
-	font-size: 10em;
+	font-size: 8rem;
 	color: red;
 }
 .icon-logo{
-	font-size: 5em;
+	font-size: 5rem;
 	color: #04C066;
 }
