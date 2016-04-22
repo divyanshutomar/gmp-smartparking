@@ -34,8 +34,9 @@ var ListManager = React.createClass({
 	},
 	render: function () {
 		var parkingItems = this.state.parkingsList.map(function (parking) {
+			var underParking = _.snakeCase(parking);
 			return(
-				<Link to={`/availability/${parking}`} className="collection-item" key={parking+"12"}>
+				<Link to={`/availability/${underParking}`} className="collection-item" key={parking+"12"}>
 				{parking}
 				</Link>
 				);

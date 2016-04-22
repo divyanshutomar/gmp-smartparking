@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 var AvailabilityView = React.createClass({
 	getInitialState: function () {
-		return({CAR:"NA",BIKE:"NA",TRUCK:"NA",TRACTOR:"NA",parkingName: this.props.params.parkName});
+		return({CAR:"NA",BIKE:"NA",TRUCK:"NA",TRACTOR:"NA",parkingName: _.startCase(this.props.params.parkName)});
 	},
 	getDataset: function () {
 		let AvailTYPES = ['CAR','BIKE','TRUCK','TRACTOR'];
