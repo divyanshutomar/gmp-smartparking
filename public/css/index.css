@@ -19,7 +19,7 @@ footer {
 }
 
 .paddingCont{
-	padding: 1.5rem;
+	padding: 0.5rem;
 }
 
 .vert-Cont{
@@ -56,17 +56,17 @@ footer {
 }*/
 @media (min-height: 700px) and (orientation: landscape) {
 	.iconSize{
-		font-size: 4rem;
+		font-size: 6rem;
 	}
 	.numSize{
-		font-size: 5rem;
+		font-size: 8rem;
 	}
 }
 @media (max-height: 700px) and (orientation: landscape) {
 	.iconSize{
-		font-size: 3rem!important;
+		font-size: 5rem!important;
 	}
 	.numSize{
-		font-size: 3rem!important;
+		font-size: 6rem!important;
 	}
 }
