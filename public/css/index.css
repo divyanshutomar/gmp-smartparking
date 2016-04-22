@@ -1,5 +1,5 @@
 .navigationHeader{
-	height: 8rem;
+	height: 5rem;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 2%;
@@ -33,17 +33,40 @@ footer {
 	justify-content: space-around;
 }
 
-.iconSize{
-	font-size: 2rem;
-}
 .parkingList{
 	font-size: xx-large;
 }
 .icon-samhasth{
-	font-size: 8rem;
+	font-size: 5rem;
 	color: red;
 }
 .icon-logo{
 	font-size: 5rem;
 	color: #04C066;
+}
+
+/*@media (min-height: 1080px) and (orientation: landscape)  {
+	.iconSize{
+		font-size: 8rem!important;
+	}
+	.numSize{
+		font-size: 10rem!important;
+	}
+
+}*/
+@media (min-height: 700px) and (orientation: landscape) {
+	.iconSize{
+		font-size: 4rem;
+	}
+	.numSize{
+		font-size: 5rem;
+	}
+}
+@media (max-height: 700px) and (orientation: landscape) {
+	.iconSize{
+		font-size: 3rem!important;
+	}
+	.numSize{
+		font-size: 3rem!important;
+	}
 }

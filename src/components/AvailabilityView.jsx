@@ -51,10 +51,10 @@ var AvailabilityView = React.createClass({
 						<div className="center"><span className="icon-tractor iconSize"></span></div>
 					</div>
 					<div className="horz-Cont">
-						<div className="center"><h2 className="iconSize">{this.state.BIKE}</h2></div>
-						<div className="center"><h2 className="iconSize">{this.state.CAR}</h2></div>
-						<div className="center"><h2 className="iconSize">{this.state.TRUCK}</h2></div>
-						<div className="center"><h2 className="iconSize">{this.state.TRACTOR}</h2></div>
+						<div className="center"><h2 className="numSize"><b>{this.state.BIKE}</b></h2></div>
+						<div className="center"><h2 className="numSize"><b>{this.state.CAR}</b></h2></div>
+						<div className="center"><h2 className="numSize"><b>{this.state.TRUCK}</b></h2></div>
+						<div className="center"><h2 className="numSize"><b>{this.state.TRACTOR}</b></h2></div>
 					</div>
 				</div>
 				<footer className="">
@@ -62,7 +62,7 @@ var AvailabilityView = React.createClass({
 						<div className="row removeBottomM">
 							<div className="col s12 m7 paddingCont">
 								<div className="row logoFooter removeBottomM">
-									<div className="col l3 center"><span className="icon-logo"></span></div>
+									<div className="col l3 right-align"><span className="icon-logo"></span></div>
 									<div className="green-text paddingCont col l9">
 										<h6>Book Your Parking at</h6>
 										<h5>GetMyParking.com</h5>
